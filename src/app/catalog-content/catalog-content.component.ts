@@ -13,7 +13,9 @@ import { Card } from '../shared/interfaces';
 export class CatalogContentComponent implements OnInit {
   test: any = window.innerWidth
   status: boolean = false;
-  end: number = window.innerWidth < 700 ? 3 : 6;
+  end: number = 15;
+  start: number = 0;
+  clickBtn: boolean = false;
 
   constructor(
     public catalogService: CatalogService,
@@ -23,11 +25,7 @@ export class CatalogContentComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(()=> {
       this.status = true
-    }, 800)
-    
-    setTimeout(()=> {
-      this.end = 100
-    }, 4000)
+    }, 400)
   }
 
   slowDownload(){
@@ -37,4 +35,10 @@ export class CatalogContentComponent implements OnInit {
     }, 800)
   }
 
+  BackNextButton(num: number) {
+    this.clickBtn = true
+    this.start += num
+    this.end += num
+    this.clickBtn = false
+  }
 }

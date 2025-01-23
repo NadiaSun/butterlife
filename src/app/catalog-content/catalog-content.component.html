@@ -69,10 +69,13 @@
     <div class="loader"></div>
   </div>
   <div class="mp-catalog-content lightgallery" [ngStyle]="{opacity: status ? '100' : '0'}">
+    <div class="center" style="margin: 10px 0" *ngIf="start !== 0">
+      <button (click)="BackNextButton(-15)" [disabled]="clickBtn" class="cd-btn secondary load-more" id="get_more" style="display: inline-block; background-color: #e4ffe5;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Завантажити попередні</font></font></button>
+    </div>
     <div class="mp-catalog-content__inner mp-catalog-item--redesign">
 
       
-      <div class="mp-catalog-item-wrap" *ngFor="let card of catalogService.catalog | slice:0:end; index as i">
+      <div class="mp-catalog-item-wrap" *ngFor="let card of catalogService.catalog | slice:start:end; index as i">
         <div class="mp-catalog-item js-catalog-item expanded" data-src="" data-id="" data-type="solution"
           data-name="" data-popup_form="solution-order-lightgallery-panel" data-popup_object_type_id=""
           data-popup_object_id="">
@@ -82,6 +85,7 @@
           <img
           class="card"
           [id]="i"
+          loading="lazy"
           (click)="popupService.openCard(card)"
           [attr.srcset]="catalogService.getCutSrcSet(card.id, card.format)"
           alt=""/>
@@ -124,6 +128,9 @@
         </div>
       </div>
      
+    </div>
+    <div class="center" style="margin: 10px 0" *ngIf="end !== 60">
+      <button (click)="BackNextButton(15)" [disabled]="clickBtn" class="cd-btn secondary load-more" id="get_more" style="display: inline-block; background-color: #e4ffe5;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Завантажити ще</font></font></button>
     </div>
   </div>
 
