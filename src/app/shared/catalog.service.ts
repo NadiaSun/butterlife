@@ -1,6 +1,6 @@
 import { HostListener, Injectable, OnDestroy } from '@angular/core';
 import { Card } from './interfaces';
-import { Subject, Subscription } from 'rxjs';
+import { Observable, Subject, Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PopupService } from './popup.service';
 
@@ -63,21 +63,16 @@ catalogRealty: Card[] = [{id: "ri_1", name: 'Сайт з нерухомості'
 
 
 public get catalog(): Card[] {
-  // if(this.route.url === '/beautysalon') {
-  //   this.category = 'beautysalon'
-  //   return this.catalogBeautySalon
-  // } else if (this.route.url === '/realty') {
-  //   this.category = 'realty'
-  //   return this.catalogRealty
-  // }
   return this.catalogRealty
 }
 
+clearCash(): Promise<any> {
+  return caches.keys().then(cache => {
+    console.log(cache)
+  });
+}
+
 getCutSrcSet(img: string, format: '.png' | '.jpg') {
-  // if(this.category === 'beautysalon') {
-  //   return `../assets/img/${this.category}/383-cut/${img}${format}, 
-  //   ../assets/img/${this.category}/600-cut/${img}_600${format} 3x`
-  // }
   return `../assets/img/${this.category}/383-cut/${img}${format}`
 }
 
