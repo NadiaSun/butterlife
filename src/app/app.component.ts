@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { Card } from './shared/interfaces';
 import { CatalogService } from './shared/catalog.service';
 import { PopupService } from './shared/popup.service';
@@ -8,8 +8,13 @@ import { PopupService } from './shared/popup.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  constructor(public popupService: PopupService) {}
-  ngOnInit(): void {
+export class AppComponent implements AfterViewInit  {
+  @ViewChild('app', {static: false}) app!: ElementRef;
+  appDiv: ElementRef;
+  
+  constructor(public popupService: PopupService, private cdr: ChangeDetectorRef) {}
+  ngAfterViewInit(): void {
+    this.appDiv = this.app;
+    this.cdr.detectChanges();
   }
 }

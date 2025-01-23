@@ -1,4 +1,4 @@
-import {Component, OnInit } from '@angular/core';
+import {Component, ElementRef, Input, OnInit } from '@angular/core';
 import { CatalogService } from '../shared/catalog.service';
 import { PopupService } from '../shared/popup.service';
 import { Router } from '@angular/router';
@@ -11,6 +11,7 @@ import { Card } from '../shared/interfaces';
   styleUrls: ['./catalog-content.component.css']
 })
 export class CatalogContentComponent implements OnInit {
+  @Input() app: ElementRef | undefined;
   test: any = window.innerWidth
   status: boolean = false;
   end: number = 15;
@@ -40,5 +41,8 @@ export class CatalogContentComponent implements OnInit {
     this.start += num
     this.end += num
     this.clickBtn = false
+    if(this.app) {
+      this.app.nativeElement.scrollTo(0, 0)
+    }
   }
 }
