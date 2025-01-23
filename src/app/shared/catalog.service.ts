@@ -78,6 +78,7 @@ catalogRealty: Card[] = [{id: "ri_1", name: 'Сайт з нерухомості'
 }, {id: "ri_57", name: 'Сайт з нерухомості', price: 700, promotionalPrice: 500, category: 'Нерухомість', format: '.png', status: false
 }, {id: "ri_58", name: 'Сайт з нерухомості', price: 700, promotionalPrice: 500, category: 'Нерухомість', format: '.png', status: false
 }, {id: "ri_59", name: 'Сайт з нерухомості', price: 700, promotionalPrice: 500, category: 'Нерухомість', format: '.png', status: false
+}, {id: "ri_60", name: 'Сайт з нерухомості', price: 700, promotionalPrice: 500, category: 'Нерухомість', format: '.png', status: false
 }]
 
 
