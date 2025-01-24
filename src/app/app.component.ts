@@ -1,6 +1,5 @@
 import { Component, ElementRef, AfterViewInit, ViewChild, ChangeDetectorRef } from '@angular/core';
-import { Card } from './shared/interfaces';
-import { CatalogService } from './shared/catalog.service';
+
 import { PopupService } from './shared/popup.service';
 
 @Component({
