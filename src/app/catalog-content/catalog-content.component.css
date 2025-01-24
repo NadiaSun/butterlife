@@ -11,6 +11,7 @@
     border-radius: 15px;
     padding: 0 20px;
     height: 40px;
+    place-content: center;
     align-content: center;
     border: #7d28c1 1px solid;
     background-color: white;

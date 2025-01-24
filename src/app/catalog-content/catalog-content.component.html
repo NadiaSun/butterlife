@@ -64,6 +64,17 @@
       </font>
     </font>
   </h1>
+  <div class="mp-catalog__text-bot" [ngStyle]="{opacity: status ? '100' : '0'}">
+    <p class="mp-catalog__text-paragraph pictured">
+      <!-- <span class="mp-catalog__text-previewText">
+        Оренда готових сайтів для нерухомості дозволяє швидко вийти на ринок із професійною онлайн-платформою. Ви отримуєте функціональний сайт із зручним пошуком об'єктів, інтеграцією карт та контактних форм без великих фінансових вкладень. Це рішення ідеально підходить для агентств та рієлторів, які хочуть привернути більше клієнтів та підвищити продажі. Крім того, готовий сайт легко оновлюється і масштабується відповідно до ваших потреб.
+      </span> -->
+    <span class="mp-catalog__text-previewText">
+      
+      Оренда сайтів для нерухомості дозволяє швидко запустити платформу з пошуком, картами та формами без значних витрат. Це ідеальне рішення для агентств і рієлторів, які прагнуть залучити клієнтів і підвищити продажі.</span>
+      Нижче можна буде переглянути 60 готових варіантів.
+    </p>
+  </div>
   
   <div class="preload" *ngIf="!status">
     <div class="loader"></div>
@@ -72,7 +83,7 @@
     <div class="center" style="margin: 10px 0" *ngIf="start !== 0">
       <button (click)="BackNextButton(-15)" [disabled]="clickBtn" class="cd-btn secondary load-more" id="get_more" style="display: inline-block; background-color: #e4ffe5;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Завантажити попередні</font></font></button>
     </div>
-    <div class="mp-catalog-content__inner mp-catalog-item--redesign">
+    <div style="margin-top: 30px;" class="mp-catalog-content__inner mp-catalog-item--redesign">
 
       
       <div class="mp-catalog-item-wrap" *ngFor="let card of catalogService.catalog | slice:start:end; index as i">
@@ -134,14 +145,5 @@
     </div>
   </div>
 
-  <div class="mp-catalog__text-bot" [ngStyle]="{opacity: status ? '100' : '0'}">
-    <p class="mp-catalog__text-paragraph pictured">
-      <!-- <span class="mp-catalog__text-previewText" *ngIf="route.url === '/beautysalon'">
-        Оренда готових сайтів для салонів краси – це швидкий і доступний спосіб створити професійний онлайн-образ для вашого бізнесу. Ви отримуєте сучасний дизайн, оптимізований під ваші потреби, без великих початкових витрат. Сайти вже налаштовані для залучення клієнтів через зручне онлайн-бронювання та SEO-оптимізацію. Це ідеальне рішення для тих, хто хоче зосередитися на розвитку бізнесу, а не на технічних деталях.
-      </span> -->
-      <span class="mp-catalog__text-previewText">
-        Оренда готових сайтів для нерухомості дозволяє швидко вийти на ринок із професійною онлайн-платформою. Ви отримуєте функціональний сайт із зручним пошуком об'єктів, інтеграцією карт та контактних форм без великих фінансових вкладень. Це рішення ідеально підходить для агентств та рієлторів, які хочуть привернути більше клієнтів та підвищити продажі. Крім того, готовий сайт легко оновлюється і масштабується відповідно до ваших потреб.
-      </span>
-    </p>
-  </div>
+  
 </div>
