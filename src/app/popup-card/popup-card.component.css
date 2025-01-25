@@ -37,7 +37,7 @@
 
 @media (max-width: 767px) {
  .img-popup {
-    margin-top: 60px;
+    margin-top: 60px!important;
     width: 120%!important;
  }
   /* .bigImg {

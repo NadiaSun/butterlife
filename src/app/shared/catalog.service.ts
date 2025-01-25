@@ -96,26 +96,24 @@ getCutSrcSet(img: string, format: '.png' | '.jpg') {
   return `../assets/img/${this.category}/383-cut/${img}${format}`
 }
 
-getSrcSet(img: string, format: '.png' | '.jpg', big?: boolean): string {
+getSrcSet(img: string, format: '.png' | '.jpg'): string {
   const w = window.innerWidth;
   if (w <= 479) {
-    if(big) {
-      return `../assets/img/${this.category}/818/${img}_818${format}, 
+
+    return `../assets/img/${this.category}/818/${img}_818${format}, 
     ../assets/img/${this.category}/1151/${img}_1151${format} 2x, 
     ../assets/img/${this.category}/1920/${img}_1920${format} 3x`;
-    }
-    return `../assets/img/${this.category}/383/${img}_383${format}, 
-    ../assets/img/${this.category}/818/${img}_818${format} 2x, 
-    ../assets/img/${this.category}/1151/${img}_1151${format} 3x`;
+    // return `../assets/img/${this.category}/383/${img}_383${format}, 
+    // ../assets/img/${this.category}/818/${img}_818${format} 2x, 
+    // ../assets/img/${this.category}/1151/${img}_1151${format} 3x`;
   } else if (480 <= w && w <= 767) {
-    if(big) {
       return `../assets/img/${this.category}/1151/${img}_1151${format}, 
     ../assets/img/${this.category}/1920/${img}_1920${format} 2x, 
     ../assets/img/${this.category}/1920/${img}_1920${format} 3x`;
-    }
-    return `../assets/img/${this.category}/818/${img}_818${format}, 
-    ../assets/img/${this.category}/1151/${img}_1151${format} 2x, 
-    ../assets/img/${this.category}/1920/${img}_1920${format} 3x`
+
+    // return `../assets/img/${this.category}/818/${img}_818${format}, 
+    // ../assets/img/${this.category}/1151/${img}_1151${format} 2x, 
+    // ../assets/img/${this.category}/1920/${img}_1920${format} 3x`
   } else if (768 <= w && w <= 1023) {
     return `../assets/img/${this.category}/818/${img}_818${format}, 
     ../assets/img/${this.category}/1920/${img}_1920${format} 2x`
