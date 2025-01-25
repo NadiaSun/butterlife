@@ -113,17 +113,10 @@
     </font>
   </h1>
   <div class="mp-catalog__text-bot" style="margin: 40px 0px 20px; justify-items: center;" [ngStyle]="{opacity: status ? '100' : '0'}">
-    <p class="mp-catalog__text-paragraph pictured">
-      <!-- <span class="mp-catalog__text-previewText">
-        Оренда готових сайтів для нерухомості дозволяє швидко вийти на ринок із професійною онлайн-платформою. Ви отримуєте функціональний сайт із зручним пошуком об'єктів, інтеграцією карт та контактних форм без великих фінансових вкладень. Це рішення ідеально підходить для агентств та рієлторів, які хочуть привернути більше клієнтів та підвищити продажі. Крім того, готовий сайт легко оновлюється і масштабується відповідно до ваших потреб.
-      </span> -->
-    <span class="mp-catalog__text-previewText" style="font-size: 12px;">
-      Оренда сайтів для нерухомості дозволяє швидко запустити платформу з пошуком, картами та формами без значних витрат. Це ідеальне рішення для агентств і рієлторів, які
-     </span>
-    
-    </p>
+    <div class="mp-catalog__text-bot" style="margin: 40px 0px 20px; justify-items: center;" [ngStyle]="{opacity: status ? '100' : '0'}">
+
       <span class="mp-catalog__text-previewText span-text">Виберіть сайт для бізнесу із {{catalogService.catalog.length}} доступних варіантів.</span>
-    
+    </div>
   </div>
   
   <div class="preload" *ngIf="!status">
@@ -194,6 +187,15 @@
       <button (click)="BackNextButton(15)" [disabled]="clickBtn" class="cd-btn secondary load-more" id="get_more" style="display: inline-block; background-color: #e4ffe5;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Завантажити ще</font></font></button>
     </div>
   </div>
-
   
+  
+<div class="mp-catalog__text-bot" style="margin: 40px 0px 20px; justify-items: center;" [ngStyle]="{opacity: status ? '100' : '0'}">
+  <p class="mp-catalog__text-paragraph pictured">
+    <!-- <span class="mp-catalog__text-previewText">
+      Оренда готових сайтів для нерухомості дозволяє швидко вийти на ринок із професійною онлайн-платформою. Ви отримуєте функціональний сайт із зручним пошуком об'єктів, інтеграцією карт та контактних форм без великих фінансових вкладень. Це рішення ідеально підходить для агентств та рієлторів, які хочуть привернути більше клієнтів та підвищити продажі. Крім того, готовий сайт легко оновлюється і масштабується відповідно до ваших потреб.
+    </span> -->
+  <span class="mp-catalog__text-previewText" style="font-size: 12px;">
+    Оренда сайтів для нерухомості дозволяє швидко запустити платформу з пошуком, картами та формами без значних витрат. Це ідеальне рішення для агентств і рієлторів, які
+   </span>
+</div>
 </div>

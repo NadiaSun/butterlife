@@ -47,6 +47,12 @@ a {
     
 }
 
+@media (max-width: 480px) {
+    .span-text {
+        font-size: 14px;
+    }
+}
+
 .id-block {
     border-radius: 15px;
     padding: 0 20px;
