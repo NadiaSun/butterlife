@@ -100,7 +100,7 @@
           <div>
             <a href="tel:+380682563512" class="tell-btn">+38 (068) 256-35-12</a>
             <br>
-            <a href="tel:+380975760466" class="tell-btn">+38 (097) 57-60-466</a>
+            <a style="position: relative; top: 10px;" href="tel:+380975760466" class="tell-btn">+38 (097) 57-60-466</a>
           
           </div>
           
@@ -120,8 +120,8 @@
   </h1>
   <div class="mp-catalog__text-bot" style="margin: 40px 0px 20px; justify-items: center; display: flex; justify-content: center;" [ngStyle]="{opacity: status ? '100' : '0'}">
 
-      <span class="mp-catalog__text-previewText span-text big">Виберіть сайт для бізнесу із {{catalogService.catalog.length}} доступних варіантів</span>
-      <span class="mp-catalog__text-previewText span-text mobile">Виберіть сайт із {{catalogService.catalog.length}} варіантів</span>
+      <span class="mp-catalog__text-previewText span-text big">Виберіть сайт для бізнесу із {{catalogService.catalog.length}} доступних варіантів:</span>
+      <span class="mp-catalog__text-previewText span-text mobile">Виберіть сайт із {{catalogService.catalog.length}} варіантів:</span>
   </div>
   
   <div class="preload" *ngIf="!status">
